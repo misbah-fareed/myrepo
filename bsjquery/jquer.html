@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="java script/jquery-3.7.1.min.js"></script>
+    <style>
+        #flip{
+            padding: 5px;
+            font-size: 18px;
+            text-align: center;
+            background-color: #555;
+            color: white;
+            border-radius: 3px;
+            border: solid 1px #666;
+            margin-top: 10px;
+        }
+        #panel{
+        padding: 50px;
+        display: none;
+        text-align: center;
+        background-color: #555;
+        color: #555;
+        color: white;
+        border: 1px solid #666;
+        border-radius: 3px;
+        font-size: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+<img src="images/bronzer2.jpeg" alt="" height="350px" width="450" id="img">
+<br>
+<button id="hide">hide</button>
+<button id="show">show</button>
+</div>
+<br>
+<button id="animation">aimate</button>
+<div style="background-color: blue; height: 100px; width: 100px; position: absolute; margin-top: 10px;" id="mydiv"></div>
+
+<br>
+<br>
+<br>
+
+
+<button id="stop" style="margin-top: 159px;">
+    stop sliding
+</button>
+
+<div id="flip">click to slide down panel</div>
+<div id="panel">hello world</div>
+
+</body>
+<script>
+    $(document).ready(function(){
+        $("#hide").click(function(){
+            $("#img").hide();
+        });
+        $("#show").click(function(){
+            $("#img").show();
+        });
+
+        $("#animation").click(function(){
+            $("#mydiv").animate({
+            left:  "400px",
+            width:  "200px",
+             height:  "200px",
+             opacity:  "0.7"
+            })
+        });
+        $("#animation").click(function(){
+            $("#panel").slideToggle();
+        })
+        $("#stop").click(function(){
+            $("#panel").stop();
+        });
+    });
+</script>
+</html>

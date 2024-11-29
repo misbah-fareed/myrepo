@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="java script/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <img id="img" src="images/loosepowder.jpeg" height="300px" width="400px" alt="">
+    <br>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+</body>
+<script>
+    // $(document).ready(function(){
+    //     $("#hide").click(function(){
+    //         $("#img").hide();
+    //     });
+    //     $("#show").click(function(){
+    //         $("#img").show();
+    //     });
+        
+    // });
+
+   
+    //     $("#hide").click(function(){
+    //         $("#img").fadetoggle();
+
+//     $(document).ready(function(){
+//        $("#hide").click(function(){
+//        $("#img").hide();
+//    });
+//    $("#show").click(function(){
+//           $("#img").fadeIn();
+//    });
+//         });
+    
+        $(document).ready(function(){
+       $("#hide").click(function(){
+       $("#img").fadeOut();
+   });
+   $("#show").click(function(){
+          $("#img").fadeIn();
+   });
+        });
+    
+</script>
+</html>
